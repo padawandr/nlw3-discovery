@@ -16,7 +16,30 @@ h1,
   height: 16vh;
 }
 
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+strong {
+  font-weight: 700;
+}
+
+#slogan {
+  animation-delay: 150ms;
+  font-weight: 800;
+  line-height: .85;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
 .visit a {
+  animation-delay: 250ms;
   background: #FFD666;
   border-radius: 3rem;
   display: flex; /* margin img */
@@ -34,22 +57,61 @@ h1,
   margin: auto;
 }
 
-#logo {
-  animation-delay: 50ms;
+@media (min-width: 768px) {
+
+  #container {
+    background: url("../images/bg.svg") no-repeat clamp(35rem, 40vw, 65rem) center / clamp(40rem, 35vw, 55rem);
+    padding: 5rem;
+    width: clamp(65rem, 75vw, 126rem);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10rem; 
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+
+  .location {
+    line-height: 1.4;
+    text-align: right;
+  }
+
+  h1 {
+    font-size: clamp(7rem, 7vw, 10rem);
+    margin: 10rem 0;
+    width: 40%;
+  }
+
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+  }
+
+  .visit p {
+    line-height: 1.4; /* 27rem 40vh 38rem */
+    width: clamp(27rem, 30vw, 38rem);
+  }
+
+  .visit a {
+    margin: initial;
+  }
+
 }
 
-.location {
-  animation-delay: 100ms;
-}
+@media (min-width: 1024px) {
 
-#slogan {
-  animation-delay: 150ms;
-}
+  h1 {
+    margin: 0;
+  }
 
-.visit p {
-  animation-delay: 200ms;
-}
-
-.visit a {
-  animation-delay: 250ms;
 }
