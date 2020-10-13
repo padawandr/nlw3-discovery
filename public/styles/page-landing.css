@@ -1,0 +1,55 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+  display: flex; /* margin #container */
+  min-height: 100%;
+  text-align: center;
+}
+
+#container {
+  margin: auto;
+  width: 90%;
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+.visit a {
+  background: #FFD666;
+  border-radius: 3rem;
+  display: flex; /* margin img */
+  height: 8rem;
+  margin: auto;
+  transition: 250ms;
+  width: 8rem;
+}
+
+.visit a:hover {
+  background: #96FEFF;
+}
+
+.visit a img {
+  margin: auto;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+#slogan {
+  animation-delay: 150ms;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  animation-delay: 250ms;
+}

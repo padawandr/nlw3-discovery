@@ -1,0 +1,15 @@
+@keyframes go-up{
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  animation: go-up 500ms backwards;
+}
