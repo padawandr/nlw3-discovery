@@ -1,3 +1,13 @@
+@keyframes fade-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes go-right {
   from {
     transform: translateX(-100%);
@@ -18,6 +28,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animate-show {
+  animation: fade-show 500ms backwards;
 }
 
 .animate-right {
