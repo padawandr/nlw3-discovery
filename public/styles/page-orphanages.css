@@ -1,0 +1,59 @@
+#page-orphanages {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
+  box-sizing: border-box;
+  padding: 8rem clamp(3rem, 5vw, 8rem);
+  width: clamp(24rem, 40vw, 44rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 12rem 0 3rem;
+}
+
+header p,
+footer {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  line-height: 1.5;
+}
+
+footer {
+  margin-top: 6rem;
+}
+
+footer strong {
+  font-weight: 700;
+}
+
+.create-orphanage {
+  background-color: #15C3D6;
+  border-radius: 2rem;
+  display: flex;
+  height: 6.4rem;
+  width: 6.4rem;
+
+  transition: background 250ms;
+
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+.create-orphanage:hover {
+  background-color: #17D6EB;
+}
+
+.create-orphanage img {
+  margin: auto;
+}

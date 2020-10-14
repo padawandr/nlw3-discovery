@@ -1,4 +1,14 @@
-@keyframes go-up{
+@keyframes go-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes go-up {
   from {
     opacity: 0;
     transform: translateY(2rem);
@@ -8,6 +18,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animate-right {
+  animation: go-right 500ms;
 }
 
 .animate-up {
