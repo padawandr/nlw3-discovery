@@ -1,11 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  border: inherit; /* remover */
+  /*border: inherit; /* remover */
 }
 
 html {
   /*border: 1px solid red; /* remover */
+  background-color: #CEDEE5;
   color: #FFF;
   font: 400 62.5%/1 'Nunito', sans-serif;
 }
