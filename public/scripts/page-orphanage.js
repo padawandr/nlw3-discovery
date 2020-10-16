@@ -8,7 +8,7 @@ const options = {
   zoomControl: false,
 };
 
-const map = L.map("mapid", options).setView([-15.7932834, -47.8865424], 13);
+const map = L.map("mapid", options).setView([-15.8576894, -47.9604377], 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
@@ -19,7 +19,7 @@ const icon = L.icon({
   popupAnchor: [170, 2],
 });
 
-L.marker([-15.7932834, -47.8865424], { icon }).addTo(map);
+L.marker([-15.8576894, -47.9604377], { icon }).addTo(map);
 
 /* image gallery */
 

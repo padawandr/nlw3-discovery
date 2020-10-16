@@ -1,4 +1,4 @@
-const map = L.map("mapid").setView([-15.7932834, -47.8865424], 13);
+const map = L.map("mapid").setView([-15.7932834, -47.8865424], 12);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
@@ -20,4 +20,4 @@ const popup = L.popup({
   'Nosso Lar <a href="orphanage.html?id=1" class="choose-orphanage"><img src="./public/images/arrow-white.svg" alt=""></a>'
 );
 
-L.marker([-15.7932834, -47.8865424], { icon }).addTo(map).bindPopup(popup);
+L.marker([-15.8576894, -47.9604377], { icon }).addTo(map).bindPopup(popup);
