@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/animations.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <link rel="stylesheet" href="/styles/map.css" />
+    <link rel="stylesheet" href="/styles/page-orphanage.css" />
+
+    <link
+      rel="shortcut icon"
+      href="/images/logo-icon.png"
+      type="image/x-icon"
+    />
+    <title>{{orphanage.name}} | Happy</title>
+  </head>
+
+  <body>
+    <div id="page-orphanage">
+      <aside class="animate-right">
+        <img src="/images/map-marker.svg" alt="Happy" />
+        <button type="button" onclick="history.back()">
+          <img src="/images/arrow-back.svg" alt="Voltar" />
+        </button>
+      </aside>
+
+      <main class="animate-show">
+        <p>Orfanato</p>
+        <div class="orphanage-details">
+          <div class="orphanage-photos">
+            <div class="images">
+              <img src="{{ orphanage.firstImage }}" alt="{{ orphanage.name }}" />
+            </div>
+
+            <div class="thumbnails">
+              
+              {{#each orphanage.images}}
+                {{#if @first}}
+                  <button onclick="selectImage(event)" class="thumb-photo active" type="button">
+                    <img src="{{ this }}" alt="{{ orphanage.name }}" />
+                  </button>
+                {{else}}
+                  <button onclick="selectImage(event)" class="thumb-photo" type="button">
+                    <img src="{{ this }}" alt="{{ orphanage.name }}" />
+                  </button>
+                {{/if}}
+              {{/each}}
+              
+            </div>
+          </div>
+
+          <div class="orphanage-info">
+            <div class="orphanage-location">
+              <h2>{{ orphanage.name }}</h2>
+              <p>{{ orphanage.description }}</p>
+
+              <div class="map-container">
+                <div id="mapid"></div>
+                <span
+                  data-lat="{{ orphanage.lat }}"
+                  data-lng="{{ orphanage.lng }}"
+                ></span>
+                <footer>
+                  <a href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=13" target="_blank">Ver rotas no Google Maps</a>
+                </footer>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="orphanage-visit">
+              <h3>Instruções para visita</h3>
+              <p>{{ orphanage.instructions }}</p>
+              <div class="orphanage-schedule">
+                <div class="orphanage-open">
+                  <img src="/images/clock.svg" alt="Relógio" />
+                  <p>Horário de visitas<br />{{ orphanage.opening_hours }}</p>
+                </div>
+
+                {{#if orphanage.open_on_weekends}}
+                  <div class="orphanage-weekends open">
+                    <img src="/images/info.svg" alt="Informação" />
+                    <p>Atendemos<br />fim de semana</p>
+                  </div>
+                {{else}}
+                  <div class="orphanage-weekends closed">
+                    <img src="/images/info-red.svg" alt="Informação" />
+                    <p>Não atendemos<br />fim de semana</p>
+                  </div>
+                {{/if}}
+
+              </div>
+            </div>
+
+            <button class="orphanage-contact">
+              <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}" target="_blank">
+                <img src="/images/whatsapp.svg" alt="Whatsapp" />
+              </a>
+              <p>Entrar em contato</p>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <script src="/scripts/page-orphanage.js"></script>
+  </body>
+</html>
