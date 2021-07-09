@@ -1,7 +1,7 @@
 # nlw3-discovery
 A website to register and research orphanages in Brasilia
 
-## Node Farm
+## Happy
 ![](https://img.shields.io/github/repo-size/padawandr/nlw3-discovery?style=flat-square)\
 ![](https://img.shields.io/badge/node-22272e?style=flat-square&logo=node.js&logoColor=8cd98c)
 ![](https://img.shields.io/badge/express-22272e?style=flat-square&logo=express&logoColor=ffffff)
